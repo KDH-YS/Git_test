@@ -24,23 +24,23 @@
             count++;
             count = String(count);
             let order = (count.split('3').length -1)+(count.split('6').length -1)+(count.split('9').length -1);
-            slap = slap+order;
+            slap +=order;
             count = Number(count);            
             continue;
         }
-        if(count%4==1){
-            log("철수");
-        }
-        else if(count%4==2){
-            log("영희");
+            if(count%4==1){
+                log("철수");
+            }
+            else if(count%4==2){
+                log("영희");
 
-        }
-        else if(count%4==3){
-            log("만수");
-        }
-        else{
-            log("숙희");
-        }
+            }
+            else if(count%4==3){
+                log("말숙");
+            }
+            else{
+                log("숙희");
+            }
         log(count);
         log(slap);
         
