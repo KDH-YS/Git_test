@@ -71,9 +71,21 @@
     // console.log(main);
 
     //02.tag로 요소찾기
-    const main = document.getElementsByTagName('a');
-    sub[4].innerHTML="홍길동";
-    console.log(sub);
+    // const main = document.getElementsByTagName('a');
+    // sub[4].innerHTML="홍길동";
+    // console.log(sub);
+    
+    //03.css선택을 사용해서 요소찾기-------------
+    // const ele_css= document.querySelector('#skill>dl');
+    // console.log(ele_css);
+    // ele_css.style.backgroundColor='yellow';
+
+    const se02 = document.querySelectorAll('nav>ul>li>a');
+    console.log(se02);
+
+    const se03 = document.querySelectorAll('nav>ul>li>a')[3];
+    console.log(se03);
+    se03.innerHTML = 'what';
 </script>
 </body>
 </html>
