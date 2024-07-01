@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      .dog{background-color: blue;}
+      .cat{background-color: orange;}
+      .cat2{color: red;}
+
+    </style>
 </head>
 <body>
     <div id="headerWrap">
   <header>
-    <h1><a href="#">My Portfolio</a></h1>
+    <h1><a href="#" class="cat">My Portfolio</a></h1>
     <nav>
 <h2 class="hideClass">메인네비게이션</h2>
 <ul>
   <li><a href="#">home</a></li>
-  <li><a href="#">about</a></li>
-  <li><a href="#">portfolio</a></li>
+  <li class="num02"><a href="#">about</a></li>
+  <li class=""><a href="#">portfolio</a></li>
   <li><a href="#">contact</a></li>
 </ul>
     </nav>
@@ -63,8 +69,8 @@
   </dl>
 </li>
     </ul>
-  </section>
-</div>
+
+  </div>
 <script>
     //01.id로 요소찾기
     // const main = document.getElementById("skill");
@@ -80,12 +86,25 @@
     // console.log(ele_css);
     // ele_css.style.backgroundColor='yellow';
 
-    const se02 = document.querySelectorAll('nav>ul>li>a');
-    console.log(se02);
+    // const se02 = document.querySelectorAll('nav>ul>li>a');
+    // console.log(se02);
 
-    const se03 = document.querySelectorAll('nav>ul>li>a')[3];
-    console.log(se03);
-    se03.innerHTML = 'what';
+    // const se03 = document.querySelectorAll('nav>ul>li>a')[3];
+    // console.log(se03);
+    // se03.innerHTML = 'what';
+
+    //04.클래스(classList)이용하기
+    let ele_a = document.getElementsByTagName('a');
+    for(ele of ele_a){
+      ele.classList.remove('cat');
+      // ele_a[0].classList.add('cat');
+      // ele_a[1].classList.add('cat2');
+    }
+    document.querySelector('nav>ul>li:nth-child(1)').classList.add('sub');
+    document.querySelector('nav>ul>li:nth-child(2)').classList.remove('num02');
+    const sub = document.querySelector('nav>ul>li:nth-child(3)').classList.contains('n03');
+    console.log(sub);    
+
 </script>
 </body>
 </html>
